@@ -1,0 +1,61 @@
+.base_graf_Em_Busca{
+  width: 100%;
+  background-color: Azure;
+  height: 200px;
+}
+
+.Busca_nome{
+  width: 15%
+  background-color: purple;
+  height: 20px;
+  float: left;
+ 
+}
+
+.Busca_valor{
+  width: 100%;
+  background-color: lightblue;
+  height: 20px;
+  float: right;
+}
+.Busca_nome_centralizado{
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: center;
+}
+
+.insert_busca_width{
+  background-color: Tomato;
+  height: 14px;
+  color: white;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 13px;
+}
+
+form {
+  width: 300px;
+  margin: 0 auto;
+  }
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+#teste{
+  background-color: red;
+}
