@@ -3,7 +3,7 @@
 /**
  * 
  */   
-class Colaborador 
+class Cargo 
 {
 	private $id;
 	private $descricao;
@@ -34,7 +34,7 @@ class Colaborador
 	}
 
 	public function setDescricao($d){
-		return $this->descricao = $e;
+		return $this->descricao = $d;
 	}
 
 	

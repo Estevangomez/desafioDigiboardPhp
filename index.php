@@ -17,8 +17,9 @@ require './conexao/conexao.php';
 <body>
 <h2>Colaboradores Cadastrados
 	 <div align="">
-		  <a href='front/frmColaborador.php'><button type='btn' value='inserir'>Inserir</button></a>
+		  <a href='front/frmColaborador.php'><button type='btn' value='inserir'>Cadastrar Colaborador</button></a>
 		  <a href='front/grafico.php'><button type='btn' value='inserir'>Gráfico</button></a>
+		  <a href='front/frmCargo.php'><button type='btn' value='inserir'>Cadastrar Cargo</button></a>
 	 </div>			
 </h2>
 <form id="filtroPesquisa" action="front/resultadoPesquisa.php" name="filtroPesquisa" method="post"> 
