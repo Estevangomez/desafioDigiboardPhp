@@ -1,5 +1,6 @@
 <html>
 <head>
+<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
 <?php 
 include '../DAO/colaboradorDAOImpl.php';
 include '../DAO/cargoDAOImpl.php';
@@ -41,9 +42,14 @@ $totalColaboradores =  $resultCountC[0]["qtd"];
 
 			$porcentagem = ($vetor["qtd"]/$totalColaboradores)*100;
 
+
 			
 			?>
-			<div class='Busca_valor'><div class='insert_busca_width' style='width: <?php echo $vetor["qtd"]?>%;'><?php echo $vetor["qtd"]; echo "&nbsp&nbsp"; echo $vetor["cargo"]; echo "&nbsp&nbsp"; echo $porcentagem,"%"?>&nbsp;</div></div>
+			<div class="progress">
+  				<div class="progress-bar" role="progressbar" style='width:<?php echo number_format($porcentagem, 2, ',', '.');;?>%;' aria-valuenow="<?php echo $vetor["qtd"]?>" aria-valuemin="0" aria-valuemax="100"> <?php echo $vetor["qtd"]; echo "&nbsp&nbsp"; echo $vetor["cargo"]; echo "&nbsp&nbsp"; echo $porcentagem,"%"?>&nbsp;</div>
+			</div>
+			<br>
+		
 			
 <?php
 
@@ -53,6 +59,7 @@ $totalColaboradores =  $resultCountC[0]["qtd"];
    	?>
 
    </div>
-    <input  onclick="window.history.go(-1); return false;"  type="submit" value="voltar" />
+   
  </body>
+ 
 </html>

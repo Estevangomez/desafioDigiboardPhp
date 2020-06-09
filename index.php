@@ -16,34 +16,34 @@ require './conexao/conexao.php';
 	$cargoDAO = new CargoDAOImpl();
 ?>
 <body>
-<h2>Colaboradores Cadastrados
+
+<div class="card" style="width: 100%;">
+  <div class="card-header">
+  <h2>Colaboradores Cadastrados
 	 <div align="">
 		  <a href='front/frmColaborador.php'> <button type="button" class="btn btn-outline-success btn-sm" value='inserir'>Cadastrar Colaborador</button> </a>
 		  <a href='front/grafico.php'>  <button type="button" class="btn btn-outline-success btn-sm" value='grafico'>Grafico</button> </a>
 		  <a href='front/frmCargo.php'><button type="button" class="btn btn-outline-success btn-sm" value='cadastrar_cargo'>Cadastrar Cargo</button></a>
-	 </div>			
+	 </div>		 		
 </h2>
 <form id="filtroPesquisa" action="front/resultadoPesquisa.php" name="filtroPesquisa" method="post"> 
 			<div style="float: right">
 				<label>Filtrar por &nbsp;</label>
-				<select id="filtro" name="filtro">
+				<select id="filtro" name="filtro" class="custom-select">
 					<option value="1">Nome</option>
 					<option value="2">Telefone</option>
 					<option value="3">E-mail</option>
 					<option value="4">Empresa</option>
 					<option value="5">Setor</option>
 					<option value="6">Cargo</option>
-				</select>
-
-					<br>		
-				<input type="text" name="pesquisa" id="pesquisa"> 
-				<button type="submit" value="pesquisar">Pesquisar</button>
+				</select>		
+				<input type="text" class="form-control" name="pesquisa" id="pesquisa">
+				<button type="submit" value="pesquisar" placeholder="pesquisar...">Pesquisar</button>
 
 			 </div>
 </form>
-
-
-<table>
+  </div>
+  <table>
 	<thead>
 		  <tr>
 		    <th>Nome</th>
@@ -85,8 +85,8 @@ require './conexao/conexao.php';
 				echo "</td>";
 
 				echo "<td id='".$colaborador["codigo"]."'>";
-				echo "<a href='front/frmEditarColaborador.php?id=".$colaborador["codigo"]."'><button type='btn' value='editar'>Editar</button></a>&nbsp;";
-				echo "<a href='front/removerColaborador.php?id=".$colaborador["codigo"]."'><button type='btn' value='Remover'>Remover</button></a>&nbsp;";
+				echo "<a href='front/frmEditarColaborador.php?id=".$colaborador["codigo"]."'>  <button type='button' class='btn btn-outline-warning btn-sm' value='editar'>Editar</button></a>&nbsp;";
+				echo "<a href='front/removerColaborador.php?id=".$colaborador["codigo"]."'>  <button type='button' class='btn btn-outline-danger btn-sm' value='Remover'>Remover</button></a>&nbsp;";
 				echo "</td>";
 
 			echo "</tr>";			
@@ -94,6 +94,12 @@ require './conexao/conexao.php';
 		}?>
 </tbody>
  </table>
+</div>
+
+
+
+
+
 </body>
 <script src="./js/acoes.js"></script>
 </html>
