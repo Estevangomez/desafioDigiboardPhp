@@ -7,6 +7,7 @@ require './conexao/conexao.php';
 	<head>
 		<meta charset="utf-8">
 		<link rel="stylesheet" type="text/css" href="css/dgb.css">
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 	</head>
 <?php
 	$colaboradorDAO = new ColaboradorDAOImpl();
@@ -17,9 +18,9 @@ require './conexao/conexao.php';
 <body>
 <h2>Colaboradores Cadastrados
 	 <div align="">
-		  <a href='front/frmColaborador.php'><button type='btn' value='inserir'>Cadastrar Colaborador</button></a>
-		  <a href='front/grafico.php'><button type='btn' value='inserir'>Gráfico</button></a>
-		  <a href='front/frmCargo.php'><button type='btn' value='inserir'>Cadastrar Cargo</button></a>
+		  <a href='front/frmColaborador.php'> <button type="button" class="btn btn-outline-success btn-sm" value='inserir'>Cadastrar Colaborador</button> </a>
+		  <a href='front/grafico.php'>  <button type="button" class="btn btn-outline-success btn-sm" value='grafico'>Grafico</button> </a>
+		  <a href='front/frmCargo.php'><button type="button" class="btn btn-outline-success btn-sm" value='cadastrar_cargo'>Cadastrar Cargo</button></a>
 	 </div>			
 </h2>
 <form id="filtroPesquisa" action="front/resultadoPesquisa.php" name="filtroPesquisa" method="post"> 
@@ -51,7 +52,7 @@ require './conexao/conexao.php';
 		    <th>Empresa</th>
 		    <th>Setor</th>
 		    <th>Cargo</th>
-		     <th>Ações</th>
+		     <th>Acoes</th>
 		  </tr>
 	</thead>
 	<tbody>
