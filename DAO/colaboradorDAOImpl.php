@@ -5,7 +5,7 @@ class ColaboradorDAOImpl implements ColaboradorDAO{
 
 
 
-public function inserir($c){
+public function inserir(Colaborador $c){
 
 			try {
 				$sql = 'INSERT INTO colaborador (nome,telefone,id_cargo,setor,empresa,email) VALUES (?,?,?,?,?,?)';
@@ -29,7 +29,7 @@ public function inserir($c){
 
 }
 
-	public function alterar($c){
+	public function alterar(Colaborador $c){
 
 			try {
 				$sql='UPDATE colaborador SET nome = ?,telefone = ?, email = ?, empresa = ?, setor = ?,id_cargo = ? WHERE codigo = ?';

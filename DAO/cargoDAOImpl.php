@@ -4,7 +4,7 @@ include 'cargoDAO.php';
 class CargoDAOImpl implements CargoDAO{
 
 
-public function inserir($c){
+public function inserir(Cargo $c){
 
 			try {
 				$sql = 'INSERT INTO cargo (descricao) VALUES (?)';
@@ -23,7 +23,7 @@ public function inserir($c){
 
 }
 
-	public function alterar($c){
+	public function alterar(Cargo $c){
 
 			try {
 				$sql='UPDATE cargo SET descricao = ? WHERE codigo = ?';
